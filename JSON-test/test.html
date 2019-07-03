@@ -16,8 +16,9 @@
 
 <body>
     <script>           
-        $.getJSON("https://api.sportradar.us/ncaafb-b1/2018/REG/schedule.json?api_key=usevcuzc3r7tcbsezpsn2jaa", function(resp) {
-            var feat = resp;
+        //$.getJSON("https://api.sportradar.us/ncaafb-b1/2018/REG/schedule.json?api_key=usevcuzc3r7tcbsezpsn2jaa", function(resp) {
+        $.getJSON("sports.json", function(resp) {
+              var feat = resp;
             //for (var i = 0, len = feat.length; i < len; i++) {
             console.log("whoop there it is!");
             //}
