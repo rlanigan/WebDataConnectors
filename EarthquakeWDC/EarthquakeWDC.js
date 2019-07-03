@@ -8,7 +8,7 @@
             {id: "mag", alias: "magnitude", dataType: tableau.dataTypeEnum.float}, 
             {id: "title", alias: "title", dataType: tableau.dataTypeEnum.string}, 
             {id: "location", dataType: tableau.dataTypeEnum.geometry},
-            {id: "time", dataType: tableau.dataTypeEnum.float}
+            {id: "place", dataType: tableau.dataTypeEnum.string}
         ];
 
         var tableSchema = {
@@ -32,7 +32,7 @@
                     "mag": feat[i].properties.mag,
                     "title": feat[i].properties.title,
                     "location": feat[i].geometry,
-                    "time": feat[i].properties.time
+                    "place": feat[i].properties.place
                 });
             }
 
