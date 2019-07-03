@@ -10,7 +10,7 @@
         ];
 
         var tableSchema = {
-            id: "Sports Feed",
+            id: "Sports_Feed",
             alias: "Something Something Sports ",
             columns: cols
         };
