@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Sports Radar: Sports Schedule for Sports Ball</title>
+    <!-- Ist a tag or something?? https://www.w3schools.com/tags/tag_meta.asp -->
+    <meta http-equiv="Cache-Control" content="no-store" />
+
+
+    <!-- importing the AJAX Framework https://www.xul.fr/ajax-frameworks.php -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+</head>
+
+
+
+
+<body>
+    <script>           
+        $.getJSON("https://api.sportradar.us/ncaafb-b1/2018/REG/schedule.json?api_key=usevcuzc3r7tcbsezpsn2jaa", function(resp) {
+            var feat = resp.weeks;
+            for (var i = 0, len = feat.length; i < len; i++) {
+                console.log("whoop there it is!")
+            }
+        });  
+    </script>
+</body>
+
+</html>
