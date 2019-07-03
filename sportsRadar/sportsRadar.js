@@ -35,15 +35,15 @@
                 for (var n = 0, game_count = feat[i].games.length; n < game_count; n++) {
                     console.log("week_id", feat[i].id, "week_num", feat[i].number);
                     console.log("     ", "game_id", feat[i].games[n].id, "home_team", feat[i].games[n].home, "away_team", feat[i].games[n].away);
-                    /*
+                    
                     tableData.push({
                         "week_id": feat[i].id,
                         "week_num": feat[i].number,
                         "game_id": feat[i].games[n].id,
                         "home_team": feat[i].games[n].home,
-                        "away_team": feat[i].games[n].home
+                        "away_team": feat[i].games[n].away
                     });
-                    */
+                    
                 }
             }
 
@@ -56,7 +56,7 @@
     tableau.registerConnector(myConnector);
     $(document).ready(function () {
         $("#submitButton").click(function () {
-            tableau.connectionName = "USGS Earthquake Feed";
+            tableau.connectionName = "Sports Data Feed";
             tableau.submit();
         });
     });
