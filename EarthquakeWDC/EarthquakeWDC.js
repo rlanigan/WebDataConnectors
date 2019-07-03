@@ -32,7 +32,7 @@
                     "mag": feat[i].properties.mag,
                     "title": feat[i].properties.title,
                     "location": feat[i].geometry,
-                    "time": feat[i].time
+                    "time": feat[i].properties.time
                 });
             }
 
