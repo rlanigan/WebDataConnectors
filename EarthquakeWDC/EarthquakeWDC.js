@@ -2,21 +2,13 @@
     var myConnector = tableau.makeConnector();
 
     myConnector.getSchema = function (schemaCallback) {
-        var cols = [{
-            id: "id",
-            dataType: tableau.dataTypeEnum.string
-        }, {
-            id: "mag",
-            alias: "magnitude",
-            dataType: tableau.dataTypeEnum.float
-        }, {
-            id: "title",
-            alias: "title",
-            dataType: tableau.dataTypeEnum.string
-        }, {
-            id: "location",
-            dataType: tableau.dataTypeEnum.geometry
-        }];
+        var cols = 
+        [
+            {id: "id", dataType: tableau.dataTypeEnum.string}, 
+            {id: "mag", alias: "magnitude", dataType: tableau.dataTypeEnum.float}, 
+            {id: "title", alias: "title", dataType: tableau.dataTypeEnum.string}, 
+            {id: "location", dataType: tableau.dataTypeEnum.geometry}
+        ];
 
         var tableSchema = {
             id: "earthquakeFeed",
