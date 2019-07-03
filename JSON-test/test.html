@@ -19,12 +19,12 @@
         //$.getJSON("https://api.sportradar.us/ncaafb-b1/2018/REG/schedule.json?api_key=usevcuzc3r7tcbsezpsn2jaa", function(resp) {
         $.getJSON("sports.json", function(resp) {
             var feat = resp.weeks;
-            console.log(feat.length, "test_5");
+            console.log(feat.length, "test_6");
 
             // Iterate over the JSON object
             for (var i = 0, week_count = feat.length; i < week_count; i++) {
                 console.log(i, " whoop there it is!");
-                for (var n = 0, game_count = 10 /*feat[i].games.length*/; n < game_count; n++) {
+                for (var n = 0, game_count = feat[i].games.length; n < game_count; n++) {
                     console.log(i, " - ", n, " week:", feat[i].number, " num of games:", feat[i].games.length); //" games:", feat[i].games, 
                 }
             }
