@@ -32,12 +32,12 @@
 
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
-                for (var j = 0, len = feat[i].games.length; j < len; j++) {
+                for (var n = 0, len = feat[i].games.length; n < len; n++) {
                     tableData.push({
                         "week_id": feat[i].id,
                         "week_num": feat[i].number,
-                        "game_id": feat[i].games[j].id,
-                        "home_team": feat[i].games[j].home
+                        "game_id": feat[i].games[n].id,
+                        "home_team": feat[i].games[n].home
                     });
                 }
             }
