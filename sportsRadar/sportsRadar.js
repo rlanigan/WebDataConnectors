@@ -22,7 +22,8 @@
 
 
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://api.sportradar.us/ncaafb-b1/2018/REG/schedule.json?api_key=usevcuzc3r7tcbsezpsn2jaa", function(resp) {
+        //$.getJSON("https://api.sportradar.us/ncaafb-b1/2018/REG/schedule.json?api_key=usevcuzc3r7tcbsezpsn2jaa", function(resp) {
+        $.getJSON("https://rlanigan.github.io/WebDataConnectors/JSON-test/sports.json", function(resp) {
             /*
                 This is where you will change what you are targeting, and what you are iterating over
                 resp."name ov array you want to iterate on"
