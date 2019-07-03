@@ -18,7 +18,7 @@
     <script>           
         //$.getJSON("https://api.sportradar.us/ncaafb-b1/2018/REG/schedule.json?api_key=usevcuzc3r7tcbsezpsn2jaa", function(resp) {
         $.getJSON("sports.json", function(resp) {
-            var feat = resp;
+            var feat = resp.weeks;
             console.log("whoop there it is!");
 
             // Iterate over the JSON object
