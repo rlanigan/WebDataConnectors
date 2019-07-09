@@ -3,20 +3,20 @@
 
     myConnector.getSchema = function (schemaCallback) {
         var cols = [
-            {id: "week_id"  , dataType: tableau.dataTypeEnum.string},
-            {id: "week_num" , dataType: tableau.dataTypeEnum.float},
-            {id: "game_id"  , dataType: tableau.dataTypeEnum.string},
-            {id: "scheduled", dataType: tableau.dataTypeEnum.string},
+            {id: "week_id"      , dataType: tableau.dataTypeEnum.string},
+            {id: "week_num"     , dataType: tableau.dataTypeEnum.float},
+            {id: "game_id"      , dataType: tableau.dataTypeEnum.string},
+            {id: "scheduled"    , dataType: tableau.dataTypeEnum.string},
 
-            {id: "home_team", dataType: tableau.dataTypeEnum.string},
-            {id: "home_score", dataType: tableau.dataTypeEnum.int},
-            {id: "away_team", dataType: tableau.dataTypeEnum.string},
-            {id: "away_score", dataType: tableau.dataTypeEnum.int},
+            {id: "home_team"    , dataType: tableau.dataTypeEnum.string},
+            {id: "home_score"   , dataType: tableau.dataTypeEnum.int},
+            {id: "away_team"    , dataType: tableau.dataTypeEnum.string},
+            {id: "away_score"   , dataType: tableau.dataTypeEnum.int},
 
-            {id: "venue_name", dataType: tableau.dataTypeEnum.string},
-            {id: "state", dataType: tableau.dataTypeEnum.string},
-            {id: "city", dataType: tableau.dataTypeEnum.string},
-            {id: "zip", dataType: tablea.dataTypeEnum.string}      
+            {id: "venue_name"   , dataType: tableau.dataTypeEnum.string},
+            {id: "state"        , dataType: tableau.dataTypeEnum.string},
+            {id: "city"         , dataType: tableau.dataTypeEnum.string},
+            {id: "zip"          , dataType: tableau.dataTypeEnum.string}      
         ];
 
         var tableSchema = {
@@ -49,20 +49,20 @@
                     //console.log("     ", "game_id", feat[i].games[n].id, "home_team", feat[i].games[n].home, "away_team", feat[i].games[n].away);
                     
                     tableData.push({
-                        "week_id"   : feat[i].id,
-                        "week_num"  : feat[i].number,
-                        "game_id"   : feat[i].games[n].id,
-                        "scheduled" : feat[i].games[n].scheduled,
+                        "week_id"       : feat[i].id,
+                        "week_num"      : feat[i].number,
+                        "game_id"       : feat[i].games[n].id,
+                        "scheduled"     : feat[i].games[n].scheduled,
                         
-                        "home_team" : feat[i].games[n].home,
-                        "home_score" : feat[i].games[n].home_points,
-                        "away_team" : feat[i].games[n].away,
-                        "away_score" : feat[i].games[n].away_points,
+                        "home_team"     : feat[i].games[n].home,
+                        "home_score"    : feat[i].games[n].home_points,
+                        "away_team"     : feat[i].games[n].away,
+                        "away_score"    : feat[i].games[n].away_points,
 
-                        "venue_name" : feat[i].games[n].venue.name,                         
-                        "state" : feat[i].games[n].venue.state,
-                        "city" : feat[i].games[n].venue.city,
-                        "zip" : feat[i].game[n].venue.zip
+                        "venue_name"    : feat[i].games[n].venue.name,                         
+                        "state"         : feat[i].games[n].venue.state,
+                        "city"          : feat[i].games[n].venue.city,
+                        "zip"           : feat[i].games[n].venue.zip
                     });
                 }
             }
