@@ -7,8 +7,16 @@
             {id: "week_num" , dataType: tableau.dataTypeEnum.float},
             {id: "game_id"  , dataType: tableau.dataTypeEnum.string},
             {id: "scheduled", dataType: tableau.dataTypeEnum.string},
+
             {id: "home_team", dataType: tableau.dataTypeEnum.string},
-            {id: "away_team", dataType: tableau.dataTypeEnum.string}
+            {id: "home_score", dataType: tableau.dataTypeEnum.int},
+            {id: "away_team", dataType: tableau.dataTypeEnum.string},
+            {id: "away_score", dataType: tableau.dataTypeEnum.int},
+
+            {id: "venue_name", dataType: tableau.dataTypeEnum.string},
+            {id: "state", dataType: tableau.geographicRoleEnum.state},
+            {id: "city", dataType: tableau.geographicRoleEnum.city},
+            {id: "zip", dataType: tablea.geographicRoleEnum.zip_code_postcode}      
         ];
 
         var tableSchema = {
@@ -36,18 +44,26 @@
             // Iterate over the JSON object
             for (var i = 0, week_count = feat.length; i < week_count; i++) {
                 for (var n = 0, game_count = feat[i].games.length; n < game_count; n++) {
-                    console.log("week_id", feat[i].id, "week_num", feat[i].number);
-                    console.log("     ", "game_id", feat[i].games[n].id, "home_team", feat[i].games[n].home, "away_team", feat[i].games[n].away);
+                    
+                    //console.log("week_id", feat[i].id, "week_num", feat[i].number);
+                    //console.log("     ", "game_id", feat[i].games[n].id, "home_team", feat[i].games[n].home, "away_team", feat[i].games[n].away);
                     
                     tableData.push({
                         "week_id"   : feat[i].id,
                         "week_num"  : feat[i].number,
                         "game_id"   : feat[i].games[n].id,
                         "scheduled" : feat[i].games[n].scheduled,
+                        
                         "home_team" : feat[i].games[n].home,
-                        "away_team" : feat[i].games[n].away
+                        "home_score" : feat[i].games[n].home_points,
+                        "away_team" : feat[i].games[n].away,
+                        "away_score" : feat[i].games[n].away_points,
+
+                        "venue_name" : feat[i].games[n].venue.name,                         
+                        "state" : feat[i].games[n].venue.state,
+                        "city" : feat[i].games[n].venue.city,
+                        "zip" : feat[i].game[n].venue.zip
                     });
-                    
                 }
             }
 
