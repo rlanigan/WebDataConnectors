@@ -3,9 +3,10 @@
 
     myConnector.getSchema = function (schemaCallback) {
         var cols = [
-            {id: "week_id", dataType: tableau.dataTypeEnum.string},
-            {id: "week_num", dataType: tableau.dataTypeEnum.float},
-            {id: "game_id", dataType: tableau.dataTypeEnum.string},
+            {id: "week_id"  , dataType: tableau.dataTypeEnum.string},
+            {id: "week_num" , dataType: tableau.dataTypeEnum.float},
+            {id: "game_id"  , dataType: tableau.dataTypeEnum.string},
+            {id: "scheduled", dataType: tableau.dataTypeEnum.string},
             {id: "home_team", dataType: tableau.dataTypeEnum.string},
             {id: "away_team", dataType: tableau.dataTypeEnum.string}
         ];
@@ -23,6 +24,7 @@
 
     myConnector.getData = function(table, doneCallback) {
         //$.getJSON("https://api.sportradar.us/ncaafb-b1/2018/REG/schedule.json?api_key=usevcuzc3r7tcbsezpsn2jaa", function(resp) {
+        //This fils is connecting to the JSON my other folder!!!!
         $.getJSON("https://rlanigan.github.io/WebDataConnectors/JSON-test/sports.json", function(resp) {
             /*
                 This is where you will change what you are targeting, and what you are iterating over
@@ -38,11 +40,12 @@
                     console.log("     ", "game_id", feat[i].games[n].id, "home_team", feat[i].games[n].home, "away_team", feat[i].games[n].away);
                     
                     tableData.push({
-                        "week_id": feat[i].id,
-                        "week_num": feat[i].number,
-                        "game_id": feat[i].games[n].id,
-                        "home_team": feat[i].games[n].home,
-                        "away_team": feat[i].games[n].away
+                        "week_id"   : feat[i].id,
+                        "week_num"  : feat[i].number,
+                        "game_id"   : feat[i].games[n].id,
+                        "scheduled" : feat[i].games[n].scheduled,
+                        "home_team" : feat[i].games[n].home,
+                        "away_team" : feat[i].games[n].away
                     });
                     
                 }
