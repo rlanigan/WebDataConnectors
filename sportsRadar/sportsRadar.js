@@ -14,9 +14,9 @@
             {id: "away_score", dataType: tableau.dataTypeEnum.int},
 
             {id: "venue_name", dataType: tableau.dataTypeEnum.string},
-            //{id: "state", dataType: tableau.geographicRoleEnum.state},
-            //{id: "city", dataType: tableau.geographicRoleEnum.city},
-            //{id: "zip", dataType: tablea.geographicRoleEnum.zip_code_postcode}      
+            {id: "state", dataType: tableau.dataTypeEnum.string},
+            {id: "city", dataType: tableau.dataTypeEnum.string},
+            {id: "zip", dataType: tablea.dataTypeEnum.string}      
         ];
 
         var tableSchema = {
@@ -60,9 +60,9 @@
                         "away_score" : feat[i].games[n].away_points,
 
                         "venue_name" : feat[i].games[n].venue.name,                         
-                        //"state" : feat[i].games[n].venue.state,
-                        //"city" : feat[i].games[n].venue.city,
-                        //"zip" : feat[i].game[n].venue.zip
+                        "state" : feat[i].games[n].venue.state,
+                        "city" : feat[i].games[n].venue.city,
+                        "zip" : feat[i].game[n].venue.zip
                     });
                 }
             }
