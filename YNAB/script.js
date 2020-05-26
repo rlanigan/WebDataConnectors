@@ -27,7 +27,13 @@
 
 
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://api.youneedabudget.com/v1/budgets/cf8bc472-2059-4c3c-881d-b373329b6450/transactions", function(resp) {
+        $.ajaxSetup({
+            headers : {
+                'Authorization': 'Bearer 797b0f9410da373cb5acb84751cb289475c269fe521c8d365c0bdc7727e9309a',
+                'X-PartnerKey' : '3252352-sdgds-sdgd-dsgs-sgs332fs3f'
+            }
+        });
+        $.getJSON("https://api.youneedabudget.com/v1/budgets/cf8bc472-2059-4c3c-881d-b373329b6450/transactions?since_date=2020-05-20", function(resp) {
             var feat = resp.data.transactions, tableData = [];
 
             // Iterate over the JSON object
